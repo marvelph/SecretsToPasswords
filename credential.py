@@ -38,7 +38,7 @@ with open(destination_file_name, "w", newline="") as file:
                 identifier_text = to_text(credential.find("identifier"))
                 name_text = to_text(credential.find("name"))
                 notes_text = to_text(credential.find("notes"))
-                # 改行文字を正規化する
+                # Normalise newline characters.
                 notes_text = notes_text.replace("\u2028", "\n")
 
                 # Ignore the second and subsequent one-time passwords.
